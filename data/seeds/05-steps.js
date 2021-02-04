@@ -1,13 +1,13 @@
-
 exports.seed = function(knex) {
-  // Deletes ALL existing entries
-  return knex('table_name').del()
-    .then(function () {
-      // Inserts seed entries
-      return knex('table_name').insert([
-        {id: 1, colName: 'rowValue1'},
-        {id: 2, colName: 'rowValue2'},
-        {id: 3, colName: 'rowValue3'}
-      ]);
-    });
+
+  return knex('steps').insert([
+    { step: 1, instruction:'pour water into cup' },
+    { step: 1, instruction:'pour water into pot' },
+    { step: 2, instruction:'add rice' },
+    { step: 3, instruction:'cook rice' },
+    { step: 1, instruction:'pour water into pot' },
+    { step: 2, instruction:'add noodles' },
+    { step: 3, instruction:'cook pasta' }
+  ]);
+
 };
